@@ -1,0 +1,17 @@
+<h1>Hi! Hello</h1>
+<p>Scanning this QR code is like opening a fridge; </p>
+<p>you never know what you'll find, </p>
+<p>but you're always hoping it's cake.</p>
+{{#if data.brand}}
+  {{#if data.model}}
+    <p>Thanks for using {{data.browserFamily}} from your favorite {{data.brand}}</p>
+    <p> {{data.model}} it is easy to hack! </p>
+  {{else}}
+    <p>Thanks for using {{data.browserFamily}} from your favorite {{data.brand}}</p>
+        <p> it is easy to hack!</p>
+  {{/if}}
+{{else}}
+  <p>Thanks for using {{data.browserFamily}} it is easy to hack!</p>
+{{/if}}
+
+
