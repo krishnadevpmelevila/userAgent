@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const axios = require('axios');
+// dotenv
+require('dotenv').config();
 /* GET home page. */
 router.get('/', async (req, res, next) => {
   const options = {
@@ -10,7 +12,7 @@ router.get('/', async (req, res, next) => {
       ua: req.headers['user-agent']
     },
     headers: {
-      'X-RapidAPI-Key': 'ab7de61726mshd2142f88fc2a5bbp18445djsnd7504c3cfd38',
+      'X-RapidAPI-Key': process.env.API_KEY,
       'X-RapidAPI-Host': 'user-agent-parser4.p.rapidapi.com'
     }
   };
